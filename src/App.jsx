@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./App.scss";
 
 const App = () => {
-  const [colorText, setColorText] = useState("Change the gradient");
   const [color1Value, setColor1Value] = useState("#fc5c7d");
   const [color2Value, setColor2Value] = useState("#6a82fb");
   const [background, setBackground] = useState(
     `linear-gradient(to right, ${color1Value}, ${color2Value})`
+  );
+  const [colorText, setColorText] = useState(
+    `Linear-gradient to right: ${color1Value} - ${color2Value}`
   );
 
   const changeColorText = () => {
@@ -15,6 +17,7 @@ const App = () => {
 
   const changeBackground = () => {
     setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
+    console.log(background);
   };
 
   const color1Change = (e) => {
