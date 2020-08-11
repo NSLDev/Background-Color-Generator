@@ -4,8 +4,9 @@ import "./App.scss";
 const App = () => {
   const [color1Value, setColor1Value] = useState("#fc5c7d");
   const [color2Value, setColor2Value] = useState("#6a82fb");
+  const [gradientDirection, setGradientDirection] = useState("to right");
   const [background, setBackground] = useState(
-    `linear-gradient(to right, ${color1Value}, ${color2Value})`
+    `linear-gradient(${gradientDirection}, ${color1Value}, ${color2Value})`
   );
   const [colorText, setColorText] = useState(
     `Linear-gradient to right: ${color1Value} - ${color2Value}`
@@ -16,8 +17,9 @@ const App = () => {
   };
 
   const changeBackground = () => {
-    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
-    console.log(background);
+    setBackground(
+      `linear-gradient(${gradientDirection}, ${color1Value}, ${color2Value})`
+    );
   };
 
   const color1Change = (e) => {
@@ -32,11 +34,16 @@ const App = () => {
     changeColorText();
   };
 
-  const getRandomColors = () => {
+  const getRandomColors = (e) => {
     setColor1Value("#" + Math.floor(Math.random() * 16777215).toString(16));
     setColor2Value("#" + Math.floor(Math.random() * 16777215).toString(16));
+    console.log(color1Value, color2Value, background);
     changeBackground();
     changeColorText();
+  };
+
+  const changeDirection = () => {
+    setGradientDirection("to bottom");
   };
 
   return (
@@ -58,10 +65,15 @@ const App = () => {
           className="app__color app__color--2"
         />
       </div>
-      <button className="app__button" onClick={getRandomColors}>
-        Random
-      </button>
       <span className="app__colorText">{colorText}</span>
+      <div className="app__buttonContainer">
+        <button className="app__button" onClick={getRandomColors}>
+          Gradient
+        </button>
+        <button className="app__button" onClick={changeDirection}>
+          Direction
+        </button>
+      </div>
     </div>
   );
 };

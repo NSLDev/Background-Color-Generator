@@ -41,18 +41,26 @@
     display: none;
   }
 
-  &__button {
+  &__colorText {
+    font-size: 28px;
     margin: 20px 0;
+    letter-spacing: 4px;
+  }
+
+  &__buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    margin: 20px 0;
+  }
+
+  &__button {
+    margin: 0;
     padding: 10px 40px;
     border-radius: 10px;
     outline: none;
     font-size: 18px;
     cursor: pointer;
-  }
-
-  &__colorText {
-    font-size: 28px;
-    margin: 20px 0;
-    letter-spacing: 4px;
   }
 }
