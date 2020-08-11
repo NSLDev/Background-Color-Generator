@@ -17,10 +17,6 @@ function getRandomColors() {
   setGradient();
 }
 
-function getRandomGradient() {
-  
-}
-
 window.addEventListener("load", setGradient);
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
