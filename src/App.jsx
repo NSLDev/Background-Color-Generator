@@ -9,19 +9,32 @@ const App = () => {
     `linear-gradient(to right, ${color1Value}, ${color2Value})`
   );
 
+  const changeColorText = () => {
+    setColorText(`Linear-gradient to right: ${color1Value} - ${color2Value}`);
+  };
+
+  const changeBackground = () => {
+    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
+  };
+
   const color1Change = (e) => {
     setColor1Value(e.target.value);
-    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
+    changeBackground();
+    changeColorText();
   };
 
   const color2Change = (e) => {
     setColor2Value(e.target.value);
-    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
+    changeBackground();
+    changeColorText();
   };
 
-  // const changeColorText = () => {
-  //   setColorText(`Linear-gradient to right: ${color1Value} / ${color2Value}`);
-  // };
+  const getRandomColors = () => {
+    setColor1Value("#" + Math.floor(Math.random() * 16777215).toString(16));
+    setColor2Value("#" + Math.floor(Math.random() * 16777215).toString(16));
+    changeBackground();
+    changeColorText();
+  };
 
   return (
     <div className="app" style={{ background: background }}>
@@ -42,6 +55,9 @@ const App = () => {
           className="app__color app__color--2"
         />
       </div>
+      <button className="app__button" onClick={getRandomColors}>
+        Random
+      </button>
       <span className="app__colorText">{colorText}</span>
     </div>
   );
