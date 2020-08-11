@@ -1,25 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 
-function App() {
+const App = () => {
+  const [colorText, setColorText] = useState("");
+
+  const getRandomColors = () => {};
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className="app__heading">Background Generator</h1>
+      <input
+        type="color"
+        name="color1"
+        value="#FC5C7D"
+        className="app__color app__color--1"
+      />
+      <input
+        type="color"
+        name="color2"
+        value="#6A82FB"
+        className="app__color app__color--2"
+      />
+      <span className="app__colorText">{colorText}</span>
     </div>
   );
-}
+};
 
 export default App;
