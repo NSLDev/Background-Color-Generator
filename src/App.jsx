@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.scss";
+import "./styles/App.scss";
 
 const App = () => {
   const [color1Value, setColor1Value] = useState("#fc5c7d");
@@ -34,17 +34,17 @@ const App = () => {
     changeColorText();
   };
 
-  const getRandomColors = (e) => {
-    setColor1Value("#" + Math.floor(Math.random() * 16777215).toString(16));
-    setColor2Value("#" + Math.floor(Math.random() * 16777215).toString(16));
-    console.log(color1Value, color2Value, background);
-    changeBackground();
-    changeColorText();
-  };
+  // const getRandomColors = (e) => {
+  //   setColor1Value("#" + Math.floor(Math.random() * 16777215).toString(16));
+  //   setColor2Value("#" + Math.floor(Math.random() * 16777215).toString(16));
+  //   changeBackground();
+  //   console.log(color1Value, color2Value, background);
+  //   changeColorText();
+  // };
 
-  const changeDirection = () => {
-    setGradientDirection("to bottom");
-  };
+  // const changeDirection = () => {
+  //   setGradientDirection("to bottom");
+  // };
 
   return (
     <div className="app" style={{ background: background }}>
@@ -67,12 +67,8 @@ const App = () => {
       </div>
       <span className="app__colorText">{colorText}</span>
       <div className="app__buttonContainer">
-        <button className="app__button" onClick={getRandomColors}>
-          Gradient
-        </button>
-        <button className="app__button" onClick={changeDirection}>
-          Direction
-        </button>
+        <button className="app__button">Gradient</button>
+        <button className="app__button">Direction</button>
       </div>
     </div>
   );
