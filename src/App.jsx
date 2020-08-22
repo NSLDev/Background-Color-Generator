@@ -4,9 +4,9 @@ import "./styles/App.scss";
 const App = () => {
   const [color1Value, setColor1Value] = useState("#fc5c7d");
   const [color2Value, setColor2Value] = useState("#6a82fb");
-  const [gradientDirection, setGradientDirection] = useState("to right");
+  // const [gradientDirection, setGradientDirection] = useState("to right");
   const [background, setBackground] = useState(
-    `linear-gradient(${gradientDirection}, ${color1Value}, ${color2Value})`
+    `linear-gradient(to right, ${color1Value}, ${color2Value})`
   );
   const [colorText, setColorText] = useState(
     `Linear-gradient to right: ${color1Value} - ${color2Value}`
@@ -17,9 +17,7 @@ const App = () => {
   };
 
   const changeBackground = () => {
-    setBackground(
-      `linear-gradient(${gradientDirection}, ${color1Value}, ${color2Value})`
-    );
+    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
   };
 
   const color1Change = (e) => {
@@ -67,8 +65,8 @@ const App = () => {
       </div>
       <span className="app__colorText">{colorText}</span>
       <div className="app__buttonContainer">
-        <button className="app__button">Gradient</button>
-        <button className="app__button">Direction</button>
+        {/* <button className="app__button">Gradient</button> */}
+        {/* <button className="app__button">Direction</button> */}
       </div>
     </div>
   );
