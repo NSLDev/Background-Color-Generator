@@ -9,16 +9,8 @@ const App = () => {
     `linear-gradient(to right, ${color1Value}, ${color2Value})`
   );
   const [colorText, setColorText] = useState(
-    `Linear-gradient to right: ${color1Value} - ${color2Value}`
+    `linear-gradient(to right, ${color1Value}, ${color2Value})`
   );
-
-  const changeColorText = () => {
-    setColorText(`Linear-gradient to right: ${color1Value} - ${color2Value}`);
-  };
-
-  const changeBackground = () => {
-    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
-  };
 
   const color1Change = (e) => {
     setColor1Value(e.target.value);
@@ -32,10 +24,18 @@ const App = () => {
     changeColorText();
   };
 
+  const changeBackground = () => {
+    setBackground(`linear-gradient(to right, ${color1Value}, ${color2Value})`);
+  };
+
+  const changeColorText = () => {
+    setColorText(`linear-gradient(to right, ${color1Value}, ${color2Value}`);
+  };
+
   // const getRandomColors = (e) => {
+  //   changeBackground();
   //   setColor1Value("#" + Math.floor(Math.random() * 16777215).toString(16));
   //   setColor2Value("#" + Math.floor(Math.random() * 16777215).toString(16));
-  //   changeBackground();
   //   console.log(color1Value, color2Value, background);
   //   changeColorText();
   // };
@@ -46,7 +46,7 @@ const App = () => {
 
   return (
     <div className="app" style={{ background: background }}>
-      <h1 className="app__heading">Background Generator</h1>
+      <h1 className="app__heading">MyGradient</h1>
       <div className="app__colorContainer">
         <input
           type="color"
@@ -65,7 +65,9 @@ const App = () => {
       </div>
       <span className="app__colorText">{colorText}</span>
       <div className="app__buttonContainer">
-        {/* <button className="app__button">Gradient</button> */}
+        {/* <button className="app__button" onClick={getRandomColors}>
+          RANDOM
+        </button> */}
         {/* <button className="app__button">Direction</button> */}
       </div>
     </div>
