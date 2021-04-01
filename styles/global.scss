@@ -1,0 +1,43 @@
+@import "./mixins";
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mygradient {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 35vh 0;
+
+  &__heading {
+    font-family: "Lobster", cursive;
+    font-size: 42px;
+    margin: 20px 0;
+    letter-spacing: 8px;
+    text-align: center;
+  }
+
+  .colorpick-eyedropper-input-trigger {
+    display: none;
+  }
+
+  &__input {
+    margin: 0 10px;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__css {
+    margin: 20px 0;
+  }
+}
