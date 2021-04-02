@@ -9,15 +9,14 @@ const directionButton = document.querySelector(".mygradient__direction");
 color1.value = "#C1929D";
 color2.value = "#767BA3";
 let direction = "to right";
-let clicked = false;
-setColors();
+setColors(color1.value, color2.value);
 
-function setColors() {
-  body.style.background = `linear-gradient(${direction}, ${color1.value}, ${color2.value})`;
+function setColors(color1, color2) {
+  body.style.background = `linear-gradient(${direction}, ${color1}, ${color2})`;
 }
 
 function setGradient() {
-  setColors();
+  setColors(color1.value, color2.value);
   cssText.innerText = body.style.background;
 }
 
@@ -28,8 +27,10 @@ function setRandomGradient() {
 }
 
 function changeDirection() {
-  direction = "to left";
-  setColors();
+  const directions = ["to top", "to right", "to bottom", "to left"];
+  direction = directions[Math.floor(Math.random() * directions.length)];
+  setColors(color1.value, color2.value);
+  cssText.innerText = body.style.background;
 }
 
 color1.addEventListener("input", setGradient);
