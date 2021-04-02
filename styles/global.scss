@@ -37,6 +37,7 @@
     width: 50px;
     height: 30px;
     @include noOutlineBorderRadius;
+    box-shadow: 0px 8px 10px rgba($black, 0.3);
     &:hover {
       cursor: pointer;
     }
@@ -50,5 +51,12 @@
   &__random {
     padding: 10px 20px;
     @include noOutlineBorderRadius;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    box-shadow: 0px 8px 10px rgba($black, 0.3);
+    &:hover {
+      box-shadow: 0px 10px 10px rgba($black, 0.5);
+      transform: translateY(1px);
+    }
   }
 }
