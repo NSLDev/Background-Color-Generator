@@ -5,6 +5,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: center;
 }
 
 .mygradient {
@@ -22,6 +23,8 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 35vh 0;
+  padding: 0 5%;
+  color: #323232;
 }
 
 .mygradient__heading {
@@ -30,6 +33,12 @@
   margin: 20px 0;
   letter-spacing: 8px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mygradient__heading {
+    font-size: 56px;
+  }
 }
 
 .mygradient .colorpick-eyedropper-input-trigger {
@@ -50,5 +59,12 @@
 
 .mygradient__css {
   margin: 20px 0;
+  font-weight: bold;
+}
+
+.mygradient__random {
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
 }
 /*# sourceMappingURL=global.css.map */

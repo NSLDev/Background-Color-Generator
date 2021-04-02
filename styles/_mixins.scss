@@ -11,3 +11,8 @@
     @content;
   }
 }
+
+@mixin noOutlineBorderRadius {
+  border-radius: 5px;
+  outline: none;
+}
