@@ -7,6 +7,7 @@
   box-sizing: border-box;
   text-align: center;
   color: $black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mygradient {
@@ -41,7 +42,11 @@
 
   &__css {
     margin: 20px 0;
+    @include tablet {
+      font-size: 20px;
+    }
     font-weight: bold;
+    letter-spacing: 1px;
   }
 
   &__random {

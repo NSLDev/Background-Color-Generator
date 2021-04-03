@@ -7,6 +7,7 @@
           box-sizing: border-box;
   text-align: center;
   color: #323232;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .mygradient {
@@ -67,6 +68,13 @@
 .mygradient__css {
   margin: 20px 0;
   font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  .mygradient__css {
+    font-size: 20px;
+  }
 }
 
 .mygradient__random {
@@ -86,6 +94,12 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
           box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
+}
+
+@media (min-width: 768px) {
+  .mygradient__random {
+    font-size: 16px;
+  }
 }
 
 .mygradient__random:hover {
@@ -110,6 +124,12 @@
   cursor: pointer;
   -webkit-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
           box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
+}
+
+@media (min-width: 768px) {
+  .mygradient__direction {
+    font-size: 16px;
+  }
 }
 
 .mygradient__direction:hover {
