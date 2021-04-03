@@ -33,9 +33,10 @@
   }
 
   &__input {
-    width: 50px;
+    width: 80px;
     height: 30px;
     @include noOutlineBorderRadius;
+    margin: 0 20px;
   }
 
   &__css {
