@@ -7,8 +7,8 @@ const randomButton = document.getElementById("mygradient__random");
 const directionButton = document.getElementById("mygradient__direction");
 
 
-color1.value = localStorage.getItem('backgroundColor').split(',')[1].trim() || "#C1929D";
-color2.value = localStorage.getItem('backgroundColor').split(',')[2].trim() || "#767BA3";
+color1.value = localStorage.getItem('backgroundColor')?.split(',')[1].trim() || "#C1929D";
+color2.value = localStorage.getItem('backgroundColor')?.split(',')[2].trim() || "#767BA3";
 
 const directions = ["to top", "to right", "to bottom", "to left"];
 let direction = 'to right';
