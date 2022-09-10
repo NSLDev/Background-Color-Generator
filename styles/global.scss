@@ -7,53 +7,40 @@
   box-sizing: border-box;
   text-align: center;
   color: $black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.mygradient {
+ #mygradient {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 5%;
 
-  &__heading {
+  h1 {
     font-family: "Lobster", cursive;
     font-size: 42px;
     margin: 20px 0;
-    letter-spacing: 8px;
     text-align: center;
-    @include tablet {
-      font-size: 56px;
-    }
+    @include tablet { font-size: 56px; }
   }
 
-  .colorpick-eyedropper-input-trigger {
-    display: none;
-  }
-
-  &__input {
-    width: 80px;
-    height: 30px;
-    @include noOutlineBorderRadius;
-    margin: 0 20px;
-  }
+  .colorpick-eyedropper-input-trigger { display: none; }
 
   &__css {
     margin: 20px 0;
-    @include tablet {
-      font-size: 20px;
-    }
     font-weight: bold;
     letter-spacing: 1px;
+    &:hover { cursor: pointer; }
+    @include tablet { font-size: 20px; }
   }
 
-  &__random {
-    @include button;
+  input {
+    width: 50px;
+    height: 30px;
+    @include noOutlineBorderRadius;
   }
 
-  &__direction {
-    @include button;
-  }
+  button { @include button; }
 }

@@ -17,22 +17,20 @@
   border-radius: 5px;
   outline: none;
   transition: 0.1s ease-in-out;
-  box-shadow: 0px 8px 10px rgba($black, 0.3);
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgba($black, 0.5);
-  }
+  &:hover { cursor: pointer; }
 }
 
 @mixin button {
-  @include noOutlineBorderRadius;
-  @include tablet {
-    font-size: 16px;
-  }
+  box-shadow: 0px 8px 10px rgba($black, 0.3);
   font-weight: bold;
   padding: 10px 20px;
-  border-width: 3px;
-  &:hover {
-    transform: translateY(1px);
+  &:nth-child(2) { margin-top: 10px; }
+  &:hover { transform: translateY(1px); }
+
+  @include tablet { 
+    font-size: 16px;
+    &:nth-child(2) { margin-top: 0; } 
   }
+
+  @include noOutlineBorderRadius;
 }

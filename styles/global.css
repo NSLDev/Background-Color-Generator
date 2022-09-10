@@ -3,137 +3,81 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
   color: #323232;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.mygradient {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#mygradient {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 0 5%;
 }
-
-.mygradient__heading {
+#mygradient h1 {
   font-family: "Lobster", cursive;
   font-size: 42px;
   margin: 20px 0;
-  letter-spacing: 8px;
   text-align: center;
 }
-
 @media (min-width: 768px) {
-  .mygradient__heading {
+  #mygradient h1 {
     font-size: 56px;
   }
 }
-
-.mygradient .colorpick-eyedropper-input-trigger {
+#mygradient .colorpick-eyedropper-input-trigger {
   display: none;
 }
-
-.mygradient__input {
-  width: 80px;
-  height: 30px;
-  margin: 0 10px;
-  border-radius: 5px;
-  outline: none;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
-          box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
-  margin: 0 20px;
-}
-
-.mygradient__input:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
-          box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
-}
-
-.mygradient__css {
+#mygradient__css {
   margin: 20px 0;
   font-weight: bold;
   letter-spacing: 1px;
 }
-
+#mygradient__css:hover {
+  cursor: pointer;
+}
 @media (min-width: 768px) {
-  .mygradient__css {
+  #mygradient__css {
     font-size: 20px;
   }
 }
-
-.mygradient__random {
+#mygradient input {
+  width: 50px;
+  height: 30px;
   margin: 0 10px;
   border-radius: 5px;
   outline: none;
-  -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
-          box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
+}
+#mygradient input:hover {
+  cursor: pointer;
+}
+#mygradient button {
+  box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
   font-weight: bold;
   padding: 10px 20px;
-  border-width: 3px;
-}
-
-.mygradient__random:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
-          box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
-}
-
-@media (min-width: 768px) {
-  .mygradient__random {
-    font-size: 16px;
-  }
-}
-
-.mygradient__random:hover {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
-}
-
-.mygradient__direction {
   margin: 0 10px;
   border-radius: 5px;
   outline: none;
-  -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
-  -webkit-box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
-          box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
-  font-weight: bold;
-  padding: 10px 20px;
-  border-width: 3px;
 }
-
-.mygradient__direction:hover {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
-          box-shadow: 0px 10px 10px rgba(50, 50, 50, 0.5);
+#mygradient button:nth-child(2) {
+  margin-top: 10px;
 }
-
+#mygradient button:hover {
+  transform: translateY(1px);
+}
 @media (min-width: 768px) {
-  .mygradient__direction {
+  #mygradient button {
     font-size: 16px;
   }
+  #mygradient button:nth-child(2) {
+    margin-top: 0;
+  }
 }
-
-.mygradient__direction:hover {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
-}
-/*# sourceMappingURL=global.css.map */
+#mygradient button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=global.css.map */

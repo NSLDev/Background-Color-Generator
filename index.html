@@ -6,24 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
-      href="https://image.flaticon.com/icons/svg/1203/1203887.svg"
+      href="https://www.clipartmax.com/png/full/83-835798_color-color-wheel-wheel-icon-color-wheel-transparent-background.png"
     />
     <title>MyGradient</title>
     <link rel="stylesheet" href="./styles/global.css" />
+    <script defer src="./script.js"></script>
   </head>
-  <body class="mygradient">
-    <h1 class="mygradient__heading">MyGradient</h1>
-    <div class="mygradient__inputWrapper">
+  <body id="mygradient">
+    <h1>MyGradient</h1>
+    <div>
       <input class="mygradient__input color1" type="color" />
       <input class="mygradient__input color2" type="color" />
     </div>
-    <span class="mygradient__css">
-      Use the color pickers or click below for a random gradient
-    </span>
-    <div class="mygradient__buttonWrapper">
-      <button class="mygradient__random">RANDOM</button>
-      <button class="mygradient__direction">DIRECTION</button>
+    <span id="mygradient__css"></span>
+    <div>
+      <button id="mygradient__random">Random Color</button>
+      <button id="mygradient__direction">Random Direction</button>
     </div>
-    <script src="./script.js"></script>
   </body>
 </html>
