@@ -7,7 +7,6 @@
   box-sizing: border-box;
   text-align: center;
   color: $black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
  #mygradient {
@@ -15,14 +14,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 0 5%;
+  position: relative;
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
 
   h1 {
     font-family: "Lobster", cursive;
     font-size: 42px;
     margin: 20px 0;
-    text-align: center;
     @include tablet { font-size: 56px; }
   }
 
@@ -31,6 +31,7 @@
   &__css {
     margin: 20px 0;
     font-weight: bold;
+    font-size: 18px;
     letter-spacing: 1px;
     &:hover { cursor: pointer; }
     @include tablet { font-size: 20px; }
@@ -42,5 +43,64 @@
     @include noOutlineBorderRadius;
   }
 
-  button { @include button; }
+  button {
+    font-family: inherit; 
+    font-size: 16px;
+    @include button; 
+  }
+
+  #alert {
+    display: none;
+    width: 90%;
+    top: 50%;
+    padding: 20px;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    border-radius: 5px;
+    transform: translate(0, -50%);
+    animation: showAlert 0.1s ease-in-out;
+    @include tablet { width: 50%; }
+
+    & > * {
+      display: block;
+    }
+
+    &__close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    &__message {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &__css {
+      margin-top: 20px;
+      font-size: 18px;
+      background: $black;
+      color: white;
+    }
+  }
+  
+  #overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+  }
+
+  @keyframes showAlert {
+    from { scale: 0; } to { scale: 1; }
+  }
 }

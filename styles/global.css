@@ -6,7 +6,6 @@
   box-sizing: border-box;
   text-align: center;
   color: #323232;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #mygradient {
@@ -14,14 +13,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 0 5%;
+  position: relative;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 #mygradient h1 {
   font-family: "Lobster", cursive;
   font-size: 42px;
   margin: 20px 0;
-  text-align: center;
 }
 @media (min-width: 768px) {
   #mygradient h1 {
@@ -34,6 +34,7 @@
 #mygradient__css {
   margin: 20px 0;
   font-weight: bold;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 #mygradient__css:hover {
@@ -56,6 +57,8 @@
   cursor: pointer;
 }
 #mygradient button {
+  font-family: inherit;
+  font-size: 16px;
   box-shadow: 0px 8px 10px rgba(50, 50, 50, 0.3);
   font-weight: bold;
   padding: 10px 20px;
@@ -80,4 +83,70 @@
 }
 #mygradient button:hover {
   cursor: pointer;
+}
+#mygradient #alert {
+  display: none;
+  width: 90%;
+  top: 50%;
+  padding: 20px;
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  border-radius: 5px;
+  transform: translate(0, -50%);
+  -webkit-animation: showAlert 0.1s ease-in-out;
+          animation: showAlert 0.1s ease-in-out;
+}
+@media (min-width: 768px) {
+  #mygradient #alert {
+    width: 50%;
+  }
+}
+#mygradient #alert > * {
+  display: block;
+}
+#mygradient #alert__close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+#mygradient #alert__message {
+  font-size: 20px;
+  font-weight: bold;
+}
+#mygradient #alert__css {
+  margin-top: 20px;
+  font-size: 18px;
+  background: #323232;
+  color: white;
+}
+#mygradient #overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+@-webkit-keyframes showAlert {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes showAlert {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
 }/*# sourceMappingURL=global.css.map */
