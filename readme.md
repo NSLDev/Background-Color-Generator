@@ -1,6 +1,6 @@
 ## MyGradient
 
-<a href="https://nlaldevmygradient.netlify.app/">
+<a href="https://nickl-dev-mygradient.netlify.app/">
   <img
     src="https://c.tenor.com/yiqrYjlbMawAAAAC/colour-color-picker.gif"
     alt="GIF of spinning color wheel"
