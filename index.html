@@ -3,37 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="A simple background color generator."/>
+    <meta name="og:description" content="A simple background color generator."/>
+    <meta name="og:title" content="A simple background color generator."/>
+    <meta name="og:url" content="https://nickl-dev-mygradient.netlify.app/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="https://www.clipartmax.com/png/full/83-835798_color-color-wheel-wheel-icon-color-wheel-transparent-background.png"
-    />
+    <meta property='og:image' content='./assets/site-image.svg' />
+    <meta property='og:image:height' content='630' />
+    <meta property='og:image:width' content='1200' />
+    <meta property="og:site_name" content="MyGradient" />
+    <meta property="og:type" content="Website" />
     <title>MyGradient</title>
-    <link rel="stylesheet" href="./styles/global.css" />
+    
+    <link
+      href="https://www.clipartmax.com/png/full/83-835798_color-color-wheel-wheel-icon-color-wheel-transparent-background.png"
+      rel="icon"
+    />
+    <link 
+      rel="stylesheet" 
+      href="./styles/global.css" 
+    />
+    <link 
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
+      rel="stylesheet" 
+    />
+    <link 
+      href="https://fonts.googleapis.com"
+      rel="preconnect" 
+    />
+    <link 
+      crossorigin
+      href="https://fonts.gstatic.com" 
+      rel="preconnect" 
+    >
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" 
+      rel="stylesheet"
+    >
   </head>
   <body id="mygradient">
-    <h1>MyGradient</h1>
+    <h1 class="mb-4">MyGradient</h1>
+
+    <div class="d-flex">
+      <input 
+        class="form-control form-control-color color1" 
+        id="exampleColorInput"
+        title="Choose your first color"
+        type="color" 
+      />
+      <input 
+        class="form-control form-control-color color2 ms-2" 
+        id="exampleColorInput"
+        title="Choose your second color"
+        type="color" 
+      />
+    </div>
+
+    <code 
+      class="mt-3 text-center text-warning fs-6"
+      id="mygradient__css" 
+    >
+    </code>
 
     <div>
-      <input class="mygradient__input color1" type="color" />
-      <input class="mygradient__input color2" type="color" />
+      <button 
+        class="btn btn-dark mt-2 fw-semibold" 
+        id="mygradient__random"
+        type="button" 
+      >
+        Random Color
+      </button>
     </div>
 
-    <code id="mygradient__css"></code>
+    <div 
+      class="text-center rounded p-4"
+      id="alert" 
+    >
+      <span id="alert__close">&#10006;</span>
 
-    <div>
-      <button id="mygradient__random">Random Color</button>
-      <button id="mygradient__direction">Random Direction</button>
+      <span 
+        class="fw-semibold fs-5"
+        id ="alert__message" 
+      >
+        Copied to clipboard:
+      </span>
+
+      <code 
+        class="w-auto p-2 mt-3 fs-6 bg-dark text-light"
+        id="alert__css" 
+      >
+      </code>
     </div>
 
-    <div id="alert">
-        <span id="alert__close">&#10006;</span>
-        <span id ="alert__message">Copied to clipboard:</span>
-        <code id="alert__css"></code>
-    </div>
+    <div id="overlay" />
 
-    <div id="overlay"/>
-
-    <script async src="./script.js"></script>
+    <script src="./dist/index.js"></script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
+      crossorigin="anonymous"
+    >
+    </script>
   </body>
 </html>

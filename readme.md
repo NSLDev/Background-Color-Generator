@@ -10,8 +10,10 @@
   />
 </a>
 
-Simple dual color gradient generator. Allows users to select a random gradient as well as change the direction.
+<br />
 
-Click [here](https://nickl-dev-mygradient.netlify.app/) to see demo.
+A simple dual color background gradient generator.
 
-Developed with `HTML, SASS, JavaScript`
+[View demo](https://nickl-dev-mygradient.netlify.app/)
+
+Built with: `HTML, TypeScript, Bootstrap, SCSS`

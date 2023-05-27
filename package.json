@@ -1,0 +1,23 @@
+{
+  "name": "mygradient",
+  "version": "1.0.0",
+  "description": "<a href=\"https://nickl-dev-mygradient.netlify.app/\">\r   <img\r     src=\"https://c.tenor.com/yiqrYjlbMawAAAAC/colour-color-picker.gif\"\r     alt=\"GIF of spinning color wheel\"\r     loading=\"lazy\"\r     width=\"100\"\r     height=\"100\" \r   />\r </a>",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickl-dev/mygradient.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickl-dev/mygradient/issues"
+  },
+  "homepage": "https://github.com/nickl-dev/mygradient#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
