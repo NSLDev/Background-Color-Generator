@@ -16,6 +16,9 @@
 #mygradient h1 {
   font-family: "Lobster Two", cursive;
 }
+#mygradient .colorpick-eyedropper-input-trigger {
+  display: none;
+}
 #mygradient__css {
   cursor: pointer;
 }

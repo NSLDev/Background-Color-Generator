@@ -10,8 +10,6 @@
   />
 </a>
 
-<br />
-
 A simple dual color background gradient generator.
 
 [View demo](https://nickl-dev-mygradient.netlify.app/)
